@@ -1,71 +1,44 @@
-# bak-extension-mode README
+# BAK Syntax Highlighter
 
-This is the README for your extension "bak-extension-mode". After writing up a brief description, we recommend including the following sections.
+**Enable syntax highlighting for `.py.bak`, `.cpp.bak1`, and other backup files in VS Code.**
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+This extension automatically detects `.bak`-suffixed files and sets the correct language mode (e.g., Python, C++, JSON) based on the original extension.
 
 ---
 
-## Following extension guidelines
+## ✅ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- Supports `.py.bak`, `.cpp.bak`, `.json.bak`, `.ts.bak1`, `.html.bak2`, etc.
+- Automatically assigns language mode when such files are opened.
+- Works on macOS, Linux, and Windows.
+- Lightweight and fast (zero config, zero lag).
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 🛠 Supported Extensions
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+| Backup File | Detected As |
+|-------------|-------------|
+| `main.py.bak` | Python |
+| `demo.cpp.bak1` | C++ |
+| `data.json.bak2` | JSON |
+| `index.html.bak3` | HTML |
+| ... and more     | ✔ |
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+> You can edit the extension to support custom formats if needed.
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## 🔧 How It Works
 
-**Enjoy!**
+This extension listens for opened files that match the pattern `*.ext.bak`, `*.ext.bak1`, etc., and applies language mode based on `.ext`.
+
+---
+
+## 📦 Installation
+
+- Search for `BAK Syntax Highlighter` in the Extensions Marketplace
+- Or install manually with:
+
+```bash
+code --install-extension bak-syntax-highlighter-0.0.1.vsix
