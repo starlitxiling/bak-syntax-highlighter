@@ -42,3 +42,21 @@ This extension listens for opened files that match the pattern `*.ext.bak`, `*.e
 
 ```bash
 code --install-extension bak-syntax-highlighter-0.0.1.vsix
+```
+
+
+## 🧠 Why?
+
+VS Code treats .py.bak as unknown format (plaintext). This extension makes your backups readable, colorful, and safe!
+
+## 🧩 Contributing
+
+PRs and feedback welcome:
+👉 https://github.com/starlitxiling/bak-syntax-highlighter
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).  
+Copyright © 2025 [starlitxiling](https://github.com/starlitxiling)
