@@ -1,9 +1,11 @@
 {
   "name": "bak-syntax-highlighter",
-  "displayName": "BAK Syntax Highlighter",
+  "displayName": "Backup File Highlighter (.bak)",
   "description": "Auto-detects .py.bak, .cpp.bak, and other backup files and applies the correct syntax highlighting in VS Code.",
   "version": "0.0.1",
   "publisher": "starlitxiling",
+  "icon": "images/icon.png",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/starlitxiling/bak-syntax-highlighter"

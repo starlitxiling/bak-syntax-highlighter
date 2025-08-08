@@ -37,7 +37,7 @@ This extension listens for opened files that match the pattern `*.ext.bak`, `*.e
 
 ## 📦 Installation
 
-- Search for `BAK Syntax Highlighter` in the Extensions Marketplace
+- Search for `Backup File Highlighter` in the Extensions Marketplace
 - Or install manually with:
 
 ```bash
