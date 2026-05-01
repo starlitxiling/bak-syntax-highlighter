@@ -10,6 +10,8 @@ This extension automatically detects `.bak`-suffixed files and sets the correct 
 
 - Supports `.py.bak`, `.cpp.bak`, `.json.bak`, `.ts.bak1`, `.html.bak2`, etc.
 - Automatically assigns language mode when such files are opened.
+- Warns when a `.bak` file becomes active, so code navigation landing in backup files is easier to notice.
+- Offers a one-click action to reopen the matching original file.
 - Works on macOS, Linux, and Windows.
 - Lightweight and fast (zero config, zero lag).
 
@@ -33,6 +35,15 @@ This extension automatically detects `.bak`-suffixed files and sets the correct 
 
 This extension listens for opened files that match the pattern `*.ext.bak`, `*.ext.bak1`, etc., and applies language mode based on `.ext`.
 
+When a `.bak` file becomes the active editor, the extension can also warn you that navigation may have landed in a backup file and let you reopen the original file immediately.
+
+## ⚙️ Settings
+
+- `bakSyntaxHighlighter.navigation.showBakWarning`
+  Show a warning when a `.bak` file becomes active.
+- `bakSyntaxHighlighter.navigation.autoOpenOriginal`
+  Automatically reopen the corresponding original file if it exists.
+
 ---
 
 ## 📦 Installation
@@ -41,7 +52,7 @@ This extension listens for opened files that match the pattern `*.ext.bak`, `*.e
 - Or install manually with:
 
 ```bash
-code --install-extension bak-syntax-highlighter-0.0.1.vsix
+code --install-extension bak-syntax-highlighter-0.0.2.vsix
 ```
 
 

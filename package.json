@@ -2,7 +2,7 @@
   "name": "bak-syntax-highlighter",
   "displayName": "Backup File Highlighter (.bak)",
   "description": "Auto-detects .py.bak, .cpp.bak, and other backup files and applies the correct syntax highlighting in VS Code.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "starlitxiling",
   "icon": "images/icon.png",
   "license": "MIT",
@@ -21,7 +21,29 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "languages": []
+    "languages": [],
+    "commands": [
+      {
+        "command": "bakSyntaxHighlighter.openOriginalFile",
+        "title": "Open Original File from Backup",
+        "category": "Backup File Highlighter"
+      }
+    ],
+    "configuration": {
+      "title": "Backup File Highlighter",
+      "properties": {
+        "bakSyntaxHighlighter.navigation.showBakWarning": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a warning when a .bak file becomes active so you know code navigation may have landed in a backup file."
+        },
+        "bakSyntaxHighlighter.navigation.autoOpenOriginal": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically switch from a .bak file to its original file when the original path exists."
+        }
+      }
+    }
   },
   "categories": [
     "Other",
